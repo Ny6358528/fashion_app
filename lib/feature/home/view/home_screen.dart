@@ -2,6 +2,7 @@ import 'package:fashion_app/core/constants/app_string.dart';
 import 'package:fashion_app/core/constants/conatants_list.dart';
 import 'package:fashion_app/core/widgets/appbar_widget.dart';
 import 'package:fashion_app/core/widgets/text_widgets.dart';
+import 'package:fashion_app/feature/category/view/category_screen.dart';
 import 'package:fashion_app/feature/home/widgets/categories_custom.dart';
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
@@ -75,7 +76,17 @@ class _HomeScreenState extends State<HomeScreen> {
           ///  Categories List
           SizedBox(
             height: 110,
-            child: CategoriesCustom(categories: ConstantsList.categoriesList),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => const CategoryScreen(),
+                  ),
+                );
+                // Handle category tap if needed
+              },
+              child: CategoriesCustom(categories: ConstantsList.categoriesList),
+            ),
           ),
 
           const Gap(10),

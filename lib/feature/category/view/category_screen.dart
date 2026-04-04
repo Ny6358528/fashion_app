@@ -1,3 +1,4 @@
+import 'package:fashion_app/core/widgets/appbar_widget.dart';
 import 'package:flutter/material.dart';
 
 class CategoryScreen extends StatelessWidget {
@@ -6,7 +7,11 @@ class CategoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Category Screen')),
+      appBar: AppbarWidget(
+        title: 'Home Screen',
+        icon1: Icons.list,
+        icon2: Icons.shopping_cart_outlined,
+      ),
       body: Center(child: Text('This is the Category Screen')),
     );
   }
