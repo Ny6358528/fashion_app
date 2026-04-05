@@ -2,6 +2,7 @@ import 'package:fashion_app/core/widgets/appbar_widget.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/constants/conatants_list.dart';
+import '../../product/view/product_details.dart';
 import '../widgets/category_filter.dart';
 import '../widgets/filter_widget.dart';
 
@@ -29,10 +30,15 @@ class CategoryScreen extends StatelessWidget {
                   childAspectRatio: 0.7,
                 ),
                 itemCount: ConstantsList.categoryFilterModel.length,
-                itemBuilder: (context, index) {
+                itemBuilder: (context, index)  {
                   final item=ConstantsList.categoryFilterModel[index];
-                  return CategoryFilter(
-categoryFilterModel: item,
+                  return InkWell(
+                    onTap: () =>Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                      return ProductDetails(item: item,);
+                    })),
+                    child: CategoryFilter(
+                    categoryFilterModel: item,
+                    ),
                   );
                 },
               ),

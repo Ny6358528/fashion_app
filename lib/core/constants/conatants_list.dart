@@ -16,7 +16,7 @@ class ConstantsList {
     CategoryFilterModel(
       name: 'Gray coat and white T-shirt',
       price: '\$20',
-      image: AppImages.men1Image,
+      image: AppImages.men3Image,
     ),
     CategoryFilterModel(
       name: 'Classic white hoodie',
@@ -36,7 +36,7 @@ class ConstantsList {
     CategoryFilterModel(
       name: 'Top man black with trousers',
       price: '\$70',
-      image: AppImages.men1Image,
+      image: AppImages.men3Image,
     ),
     CategoryFilterModel(
       name: 'Minimal black style',
