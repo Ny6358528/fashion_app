@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class TextWidgets extends StatelessWidget {
-  const TextWidgets({super.key, required this.text, this.textStyle});
+  const TextWidgets({super.key, required this.text, this.textStyle,  int? maxLines});
   final String text;
   final TextStyle? textStyle;
   @override

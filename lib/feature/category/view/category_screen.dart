@@ -1,7 +1,9 @@
 import 'package:fashion_app/core/widgets/appbar_widget.dart';
 import 'package:flutter/material.dart';
 
+import '../../../core/constants/conatants_list.dart';
 import '../widgets/category_filter.dart';
+import '../widgets/filter_widget.dart';
 
 class CategoryScreen extends StatelessWidget {
   const CategoryScreen({super.key});
@@ -14,9 +16,29 @@ class CategoryScreen extends StatelessWidget {
         icon1: Icons.list,
         icon2: Icons.shopping_cart_outlined,
       ),
-      body:Column(children: [
-        CategoryFilter()
-      ],)
+        body: Column(
+          children: [
+            FilterWidget(),
+
+            Expanded(
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  childAspectRatio: 0.7,
+                ),
+                itemCount: ConstantsList.categoryFilterModel.length,
+                itemBuilder: (context, index) {
+                  final item=ConstantsList.categoryFilterModel[index];
+                  return CategoryFilter(
+categoryFilterModel: item,
+                  );
+                },
+              ),
+            ),
+          ],
+        )
     );
   }
 }

@@ -11,5 +11,9 @@ class AppImages {
   static const String gridOutlineImage = '$pathImages/ion_grid-outline.svg';
   static const String lucideSettingsImage = '$pathImages/lucide_settings-2.svg';
   static const String solarUsersImage = '$pathImages/solar_users-group-rounded-outline.svg';
-
+  static const String men1Image = '$pathImages/men1.png';
+  static const String men2Image = '$pathImages/men2.png';
+  static const String men3Image = '$pathImages/men3.png';
+  static const String men4Image = '$pathImages/men4.png';
+  static const String shadowImage = '$pathImages/shadow.svg';
 }
